@@ -60,8 +60,7 @@ class MainApp(QMainWindow, ui):
     def show_mainform(self):
         self.tabWidget.setCurrentIndex(1)
 
-        ### SHOW TRAINING FORM ###
-
+    ### SHOW TRAINING FORM ###
     def show_training_form(self):
         self.tabWidget.setCurrentIndex(2)
 
@@ -209,6 +208,7 @@ class MainApp(QMainWindow, ui):
                         if result:
                             for maxid in result:
                                 attendanceid = int(maxid[0]) + 1
+                        connection.commit()
                     except:
                         attendanceid = 1
                     print(attendanceid)
