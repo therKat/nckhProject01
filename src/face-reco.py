@@ -10,7 +10,7 @@ import cv2, os, numpy
 ui, _ = loadUiType('face-reco.ui')
 
 
-class MainApp(QMainWindow, ui):
+class MainApplication(QMainWindow, ui):
     def __init__(self):
         QMainWindow.__init__(self)
         self.setupUi(self)
@@ -248,7 +248,7 @@ class MainApp(QMainWindow, ui):
 
 def main():
     app = QApplication(sys.argv)
-    window = MainApp()
+    window = MainApplication()
     window.show()
     app.exec_()
 
